@@ -63,12 +63,12 @@ Shader "Unlit/GT_ToneMapping"
 			}
 
 			float GranTurismoTonemapper(float x) {
-				float P = 1;
-				float a = 1;
-				float m = 0.22;
-				float l = 0.4;
-				float c = 1.33;
-				float b = 0;
+				float P = 1;			//Maximum brightness
+				float a = 1;			//Contrast
+				float m = 0.22;			//Linear section start
+				float l = 0.4;			//Linear section length
+				float c = 1.33;			//Black tightness
+				float b = 0;			//
 				float l0 = (P - m)*l / a;
 				float L0 = m - m / a;
 				float L1 = m + (1 - m) / a;
